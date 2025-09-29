@@ -35,9 +35,9 @@
         function atualizar(){
             var div=document.getElementById('relogio')
             var time=new Date();
-            var hora =time.getHours();
-            var minutos=time.getMinutes();
-            var segundos=time.getSeconds();
+            var hora =time.getHours().toString().padStart(2,"0");
+            var minutos=time.getMinutes().toString().padStart(2,"0");
+            var segundos=time.getSeconds().toString().padStart(2,"0");
             div.innerText=`${hora}:${minutos}:${segundos}`
         }
         atualizar();
